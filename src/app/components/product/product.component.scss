@@ -1,0 +1,48 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .product__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    border: 2px solid grey;
+    width: 550px;
+    .btn__close {
+      border: none;
+      padding: 10px 30px;
+      background-color: grey;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .btn__open {
+      border: none;
+      padding: 10px 30px;
+      background-color: yellow;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: 600;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 60px;
+      height: 90px;
+    }
+  }
+}

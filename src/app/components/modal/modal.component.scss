@@ -1,0 +1,17 @@
+.modal {
+  position: fixed;
+  opacity: 0.7;
+  background-color: #989696;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.form {
+  position: absolute;
+  top: 80px;
+  width: 500px;
+  left: 650px;
+
+  background-color: white;
+}

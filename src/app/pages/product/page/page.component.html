@@ -1,0 +1,14 @@
+<h1>{{ title | titlecase }}</h1>
+<input type="text" [(ngModel)]="binding" />
+<p *ngIf="loading">Loading...</p>
+<div *ngIf="productService.products">
+  <app-product
+    *ngFor="let product of productService.products | fillterProducts:binding; let i = index"
+    [product]="product"
+  ></app-product>
+</div>
+
+<app-modal *ngIf="modalService.isVisible$ | async"  title="Create">
+  <app-create-product></app-create-product>
+</app-modal>
+<button (click)="modalService.open()">Добавить</button>

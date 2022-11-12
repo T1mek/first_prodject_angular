@@ -1,0 +1,26 @@
+<div class="product__info">
+  <img [src]="product.image" [alt]="product.title" />
+  <h2>{{ product.title }}</h2>
+  <p>
+    Цена : <span>{{ product.price | currency }}</span>
+  </p>
+  <button
+    [ngClass]="{
+      btn__open: !details,
+      btn__close: details
+    }"
+    (click)="details = !details"
+    class="btn__open"
+  >
+    {{ details ? "Скрыть" : "Показать" }}
+  </button>
+  <div *ngIf="details">
+    <p>{{ product.description }}</p>
+    <p>
+      рейтинг :
+      <span [ngClass]="{ fontWeight: 'bold' }">
+        {{ product.rating.rate | number: "1.2-4" }}</span
+      >
+    </p>
+  </div>
+</div>
